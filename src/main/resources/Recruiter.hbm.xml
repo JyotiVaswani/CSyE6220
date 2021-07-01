@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+    <class name = "com.CSyE6220.TechWorldHustle.pojo.Recruiter" table = "Recruiter">
+        <id name="userId" column= "RecruiterId" type="int">
+            <generator class="native"/>
+        </id>
+        
+        <property name="firstName" column="FirstName" type="string"/>
+        <property name="lastName" column="LastName" type="string"/>
+        <property name="company" column="Company" type="string"/>
+        <property name="dob" column="DOB" type="date"/>
+        <property name="gender" column="gender" type="string"/>
+        <property name="contact" column="Contact" type="string"/>
+        <property name="current_location" column="Current_location" type="string"/>
+        <property name="userName" column="Username" type="string"/>
+        <property name="password" column="password" type="string"/>
+               
+    </class>          
+</hibernate-mapping>

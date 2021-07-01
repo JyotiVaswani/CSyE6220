@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+    <class name = "com.CSyE6220.TechWorldHustle.pojo.Application" table = "Application">
+        <id name="applicationId" column= "ApplicationId" type="int">
+            <generator class="native"/>
+        </id>
+        <many-to-one class = "com.CSyE6220.TechWorldHustle.pojo.Job" name="jobId" column="JobId" not-null="true"/>
+        <many-to-one class = "com.CSyE6220.TechWorldHustle.pojo.Candidate" name="candidateId" column="CandidateId" not-null="true"/>
+        <many-to-one class = "com.CSyE6220.TechWorldHustle.pojo.Recruiter" name="recruiterId" column="RecruiterId" not-null="true"/>
+        <property name="applicationDate" column="ApplicationDate" type="date"/>
+        <property name="status" column="status" type="string"/>
+        <property name="remarks" column="Remarks" type="string"/>        
+    </class> 
+  
+    <class name = "com.CSyE6220.TechWorldHustle.pojo.Candidate" table = "Candidate">
+        <id name="userId" column= "CandidateId" type="int">
+            <generator class="native"/>
+        </id>
+    </class>
+  
+    <class name = "com.CSyE6220.TechWorldHustle.pojo.Recruiter" table = "Recruiter">
+        <id name="userId" column= "RecruiterId" type="int">
+            <generator class="native"/>
+        </id>
+    </class>
+    
+    <class name = "com.CSyE6220.TechWorldHustle.pojo.Job" table = "Job">
+        <id name="jobId" column= "JobId" type="int">
+            <generator class="native"/>
+        </id>
+    </class>
+                               
+</hibernate-mapping>

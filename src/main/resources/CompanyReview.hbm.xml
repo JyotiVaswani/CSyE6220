@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+    <class name = "com.CSyE6220.TechWorldHustle.pojo.CompanyReview" table = "CompanyReview">
+        <id name="reviewId" column= "ReviewId" type="int">
+            <generator class="native"/>
+        </id>
+        <property name="jobTitle" column="JobTitle" type="string"/>
+        <property name="company" column="Company" type="string"/>
+        <property name="employmentStatus" column="EmploymentStatus" type="string"/>   
+        <property name="lastYearOfEmployment" column="LastYearOfEmployment" type="int"/>
+        <property name="employmentType" column="EmploymentType" type="string"/>
+        <property name="pros" column="pros" type="string"/>
+        <property name="cons" column="cons" type="string"/>
+        <property name="adviceToManagement" column="adviceToManagement" type="string"/>
+        <property name="additionalComments" column="additionalComments" type="string"/>
+        <property name="reviewDate" column="reviewDate" type="date"/> 
+        <one-to-one class = "com.CSyE6220.TechWorldHustle.pojo.IndividualRating" name="rating" cascade="all"/>
+    </class> 
+    
+</hibernate-mapping>

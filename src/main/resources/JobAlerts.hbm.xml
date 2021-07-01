@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+    <class name = "com.CSyE6220.TechWorldHustle.pojo.JobAlerts" table = "JobAlerts">
+        <id name="alertId" column= "alertId" type="int">
+            <generator class="native"/>
+        </id>
+        
+        <property name="alertName" column="alertName" type="string"/>
+        <property name="jobTitle" column="JobTitle" type="string"/>
+        <property name="location" column="location" type="string"/>
+        <property name="minSalary" column="minSalary" type="double"/>
+        <many-to-one class = "com.CSyE6220.TechWorldHustle.pojo.Candidate" name="userId" column="CandidateId" not-null="true"/>           
+    </class>  
+    
+    
+    <class name = "com.CSyE6220.TechWorldHustle.pojo.Candidate" table = "Candidate">
+        <id name="userId" column= "CandidateId" type="int">
+            <generator class="native"/>
+        </id>
+    </class>
+                   
+</hibernate-mapping>

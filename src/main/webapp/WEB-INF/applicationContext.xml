@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+ 
+         
+ 
+    <bean id="CDAO" class="com.CSyE6220.TechWorldHustle.DAO.CandidateDAO"/> 
+
+    <bean id="RDAO" class="com.CSyE6220.TechWorldHustle.DAO.RecruiterDAO"/> 
+    
+    <bean id="JDao" class="com.CSyE6220.TechWorldHustle.DAO.JobDAO"/> 
+    
+    <bean id="AppDao" class="com.CSyE6220.TechWorldHustle.DAO.ApplicationDAO"/>
+    
+    <bean id="SDao" class="com.CSyE6220.TechWorldHustle.DAO.SkillDAO"/>
+    
+    <bean id="ComDao" class="com.CSyE6220.TechWorldHustle.DAO.CompanyDAO"/>
+    
+    <bean id="CRDao" class="com.CSyE6220.TechWorldHustle.DAO.CompanyReviewDAO"/>
+    
+    <bean id="MVSDao" class="com.CSyE6220.TechWorldHustle.DAO.MarketValueSalaryDAO"/>
+    
+    <bean id="IRDao" class="com.CSyE6220.TechWorldHustle.DAO.IndividualRatingDAO"/>
+
+    <bean id="JADao" class="com.CSyE6220.TechWorldHustle.DAO.JobAlertsDAO"/>
+    
+    <bean id="jobalert" class="com.CSyE6220.TechWorldHustle.Controllers.JobAlertsSchedular"></bean>
+ 
+    <bean id="WDDao" class="com.CSyE6220.TechWorldHustle.DAO.WalkInDriveDAO"/>
+</beans>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+    <class name = "com.CSyE6220.TechWorldHustle.pojo.Company" table = "Company">
+        <id name="companyId" column= "CompanyId" type="int">
+            <generator class="native"/>
+        </id>
+        <property name="companyName" column="CompanyName" type="string"/>
+    </class>
+</hibernate-mapping>

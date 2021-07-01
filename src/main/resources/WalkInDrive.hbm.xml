@@ -1,0 +1,22 @@
+<hibernate-mapping>
+    <class name = "com.CSyE6220.TechWorldHustle.pojo.WalkInDrive" table = "WalkInDrive">
+        <id name="driveId" column= "DriveId" type="int">
+            <generator class="native"/>
+        </id>
+        
+        
+        <property name="company" column="Company" type="string"/>
+        <property name="driveDate" column="DriveDate" type="date"/>
+        <property name="venue" column="Venue" type="string"/>
+        <property name="baseLocation" column="BaseLocation" type="string"/>
+        <many-to-one class = "com.CSyE6220.TechWorldHustle.pojo.Recruiter" name="recruiterId" column="RecruiterId" not-null="true"/>           
+    </class>  
+    
+    
+    <class name = "com.CSyE6220.TechWorldHustle.pojo.Recruiter" table = "Recruiter">
+        <id name="userId" column= "RecruiterId" type="int">
+            <generator class="native"/>
+        </id>
+    </class>
+                   
+</hibernate-mapping>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+    <class name = "com.CSyE6220.TechWorldHustle.pojo.Job" table = "Job">
+        <id name="jobId" column= "JobId" type="int">
+            <generator class="native"/>
+        </id>
+        
+        <property name="jobTitle" column="JobTitle" type="string"/>
+        <property name="company" column="Company" type="string"/>
+        <property name="startDate" column="StartDate" type="date"/>
+        <property name="status" column="status" type="string"/>
+        <property name="salaryOffered" column="SalaryOffered" type="double"/>
+        <property name="location" column="Location" type="string"/>
+        <property name="jobDescription" column="JobDescription" type="string"/>
+        <property name="primary_skills" column="skillsRequired" type="string"/>
+        <many-to-one class = "com.CSyE6220.TechWorldHustle.pojo.Recruiter" name="recId" column="RecruiterId" not-null="true"/>           
+    </class>  
+    
+    
+    <class name = "com.CSyE6220.TechWorldHustle.pojo.Recruiter" table = "Recruiter">
+        <id name="userId" column= "RecruiterId" type="int">
+            <generator class="native"/>
+        </id>
+    </class>
+                   
+</hibernate-mapping>
